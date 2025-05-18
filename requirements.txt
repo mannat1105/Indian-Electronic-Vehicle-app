@@ -7,5 +7,5 @@ altair
 plotly
 scikit-learn
 openpyxl
-st-on-hover-tabs
+streamlit-on-Hover-tabs
 
