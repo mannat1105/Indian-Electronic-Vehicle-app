@@ -13,7 +13,7 @@ import os
 # In[54]:
 
 
-zip_path = r"C:\Users\HP\Desktop\Sem4\India EV Market Data.zip"         
+zip_path = "India EV Market Data.zip"        
 extract_to = "ev_dataset"      
 
 
