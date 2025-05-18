@@ -207,7 +207,7 @@ df_vehicle_class = pd.read_csv("Vehicle Class - All.csv")
 import pandas as pd
 
 # Load the CSV, treating '#######' as NaN
-df_vehicle_class = pd.read_csv("ev_dataset\Vehicle Class - All.csv", na_values=['#######'])
+df_vehicle_class = pd.read_csv("Vehicle Class - All.csv", na_values=['#######'])
 na_values=(['#######'])
 # Convert 'Total Registration' to string to handle string operations
 df_vehicle_class['Total Registration'] = df_vehicle_class['Total Registration'].astype(str)
