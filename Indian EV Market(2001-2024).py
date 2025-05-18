@@ -40,7 +40,7 @@ for root, dirs, files in os.walk(extract_to):
 import pandas as pd
 
  #Loading one csv file
-df = pd.read_csv("ev_dataset/ev_sales_by_makers_and_cat_15-24.csv")
+df = pd.read_csv("ev_sales_by_makers_and_cat_15-24.csv")
 df.head()
 
 
@@ -128,7 +128,7 @@ df.head()
 # In[67]:
 
 
-df_ev_makers = pd.read_csv("ev_dataset\EV Maker by Place.csv")
+df_ev_makers = pd.read_csv("EV Maker by Place.csv")
 
 
 # In[68]:
@@ -160,7 +160,7 @@ print(df_ev_makers.duplicated().sum())
 # In[70]:
 
 
-df_pcs = pd.read_csv("ev_dataset\OperationalPC.csv")
+df_pcs = pd.read_csv("OperationalPC.csv")
 
 
 # In[71]:
@@ -198,7 +198,7 @@ print(df_pcs.isnull().sum())
 # In[74]:
 
 
-df_vehicle_class = pd.read_csv("ev_dataset\Vehicle Class - All.csv")
+df_vehicle_class = pd.read_csv("Vehicle Class - All.csv")
 
 
 # In[75]:
@@ -255,7 +255,7 @@ df_vehicle_class.to_csv('vehicle_class_cleaned.csv', index=False)
 # In[79]:
 
 
-df_ev_cat = pd.read_csv("ev_dataset\ev_cat_01-24.csv")
+df_ev_cat = pd.read_csv("ev_cat_01-24.csv")
 
 
 # In[80]:
@@ -338,10 +338,10 @@ st.markdown("""
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    sales = pd.read_csv("ev_dataset/ev_sales_by_makers_and_cat_15-24.csv")
-    ev_cat = pd.read_csv("ev_dataset/ev_cat_01-24.csv")
-    ev_makers = pd.read_csv("ev_dataset/EV Maker by Place.csv")
-    pcs = pd.read_csv("ev_dataset/OperationalPC.csv")
+    sales = pd.read_csv("ev_sales_by_makers_and_cat_15-24.csv")
+    ev_cat = pd.read_csv("ev_cat_01-24.csv")
+    ev_makers = pd.read_csv("EV Maker by Place.csv")
+    pcs = pd.read_csv("OperationalPC.csv")
     vehicle_class = pd.read_csv("vehicle_class_cleaned.csv")
     return sales, ev_cat, ev_makers, pcs, vehicle_class
 
@@ -698,7 +698,7 @@ import plotly.express as px
 plt.style.use("dark_background")
 
 # Load dataset
-df = pd.read_csv("ev_dataset/OperationalPC.csv")  # Ensure the path is correct
+df = pd.read_csv("OperationalPC.csv")  # Ensure the path is correct
 
 # Create
 if selected_tab == "Charging Infrastructure":
@@ -760,7 +760,7 @@ import seaborn as sns
 plt.style.use("dark_background")
 
 # Load dataset
-df = pd.read_csv("ev_dataset/ev_sales_by_makers_and_cat_15-24.csv")  
+df = pd.read_csv("ev_sales_by_makers_and_cat_15-24.csv")  
 
 
 # Create tabs
@@ -896,7 +896,7 @@ plt.style.use("dark_background")
 # st.set_page_config(layout="wide")
 
 # Load dataset
-df = pd.read_csv("ev_dataset/Vehicle Class - All.csv")  # Use forward slash for cross-platform compatibility
+df = pd.read_csv("Vehicle Class - All.csv")  # Use forward slash for cross-platform compatibility
 
 
 if selected_tab == "Vehicle Class":
